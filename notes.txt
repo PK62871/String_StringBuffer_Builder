@@ -1,0 +1,29 @@
+String, StringBuffer, and StringBuilder in Java
+
+1. String
+
+Represents an immutable sequence of characters.
+Once created, a String object cannot be changed.
+Any modification (like concatenation, replace, substring) creates a new object.
+Stored in the String Pool (if created as literals).
+Useful when data is not going to change frequently.
+Provides many utility methods like length(), charAt(), substring(), equals(), toLowerCase(), toUpperCase(), etc.
+Performance: Slower for frequent modifications because each change creates a new object.
+
+2. StringBuffer
+
+Represents a mutable sequence of characters.
+Content can be changed without creating new objects.
+Thread-safe → All methods are synchronized.
+Suitable for multithreaded applications where multiple threads may modify the same sequence.
+Provides methods like append(), insert(), delete(), replace(), reverse(), capacity(), ensureCapacity(), setCharAt(), length(), substring(), etc.
+Performance: Slower than StringBuilder due to synchronization overhead.
+
+3. StringBuilder
+
+Also represents a mutable sequence of characters.
+Content can be changed without creating new objects.
+Not thread-safe → Methods are not synchronized.
+Suitable for single-threaded applications where performance is important.
+Provides the same set of methods as StringBuffer (append(), insert(), delete(), replace(), reverse(), capacity(), etc.).
+Performance: Faster than StringBuffer because it avoids synchronization.
